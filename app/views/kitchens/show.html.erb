@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @kitchen.name %>
+</p>
+
+<h2>Recipes</h2>
+
+<ul>
+<% @kitchen.recipes.each do |r| %>
+	<li><%= link_to r.name, kitchen_recipe_path(@kitchen, r) %></li>
+<% end %>
+</ul>
+
+<br><br>
+
+<%= link_to "create Recipe", new_kitchen_recipe_path(@kitchen) %>
+
+<br><br>
+
+<%= link_to 'Edit', edit_kitchen_path(@kitchen) %> |
+<%= link_to 'Back', kitchens_path %>

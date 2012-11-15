@@ -1,0 +1,19 @@
+<div class"hero-unit">
+<h2>DinnerTime</h2>
+<small>Time For Dinner</small>
+<br>
+<br>
+<% @kitchens.each do |kitchen| %>
+  <div>
+  	<h3><%= kitchen.id  %>
+    <!-- <td><%= kitchen.name %><br></td> -->
+    <div class="btn btn-secondary"><%= link_to kitchen.name, kitchen %>
+</div>
+</h3>
+  </div>
+<%end%>
+<br>
+<br>
+<a class="btn btn-primary" <%= link_to 'Create a New Kitchen', new_kitchen_path %> </a>
+</div>
+
